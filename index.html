@@ -64,7 +64,7 @@
 
       function refreshPicture() {
         var img = $("<img/>").hide().attr('src', 'https://source.unsplash.com/random/' + resolution + '?' +
-                  $("#filter").val().replace(/\s/g, "") + '&' + (_cache_kill++))
+                  $("#filter").val().replace(/\s/g, "") + '&a=' + (_cache_kill++))
           .on('load', function() {
             if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
               console.log('broken image!');
